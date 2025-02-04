@@ -4,6 +4,7 @@ import java.util.Map;
 
 import nl.tudelft.jpacman.board.Direction;
 import nl.tudelft.jpacman.board.Unit;
+import nl.tudelft.jpacman.npc.Ghost;
 import nl.tudelft.jpacman.sprite.AnimatedSprite;
 import nl.tudelft.jpacman.sprite.Sprite;
 
@@ -35,6 +36,11 @@ public class Player extends Unit {
     private boolean alive;
 
     /**
+     * The amount of lives this player has left.
+     */
+    private int lives;
+
+    /**
      * {@link Unit} iff this player died by collision, <code>null</code> otherwise.
      */
     private Unit killer;
@@ -50,6 +56,7 @@ public class Player extends Unit {
     protected Player(Map<Direction, Sprite> spriteMap, AnimatedSprite deathAnimation) {
         this.score = 0;
         this.alive = true;
+        this.lives = 3;
         this.sprites = spriteMap;
         this.deathSprite = deathAnimation;
         deathSprite.setAnimating(false);
@@ -108,6 +115,18 @@ public class Player extends Unit {
      */
     public int getScore() {
         return score;
+    }
+
+    public int getLives() {
+        return lives;
+    }
+    public void setLives(int lives) {
+        this.lives = lives;
+    }
+
+    public int decrementLives(int lives) {
+        this.setLives(this.getLives() - lives);
+        return this.getLives();
     }
 
     @Override

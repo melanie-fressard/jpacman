@@ -48,9 +48,11 @@ public class DefaultPlayerInteractionMap implements CollisionMap {
 
         collisionMap.onCollision(Player.class, Ghost.class,
             (player, ghost) -> {
+            if (player.decrementLives(1) == 0) {
                 pointCalculator.collidedWithAGhost(player, ghost);
                 player.setAlive(false);
                 player.setKiller(ghost);
+            }
             });
 
         collisionMap.onCollision(Player.class, Pellet.class,

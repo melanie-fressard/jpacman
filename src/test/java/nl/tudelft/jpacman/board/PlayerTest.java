@@ -32,4 +32,6 @@ public class PlayerTest {
         assertThat(playerDefault.getLives()).isEqualTo(0);
     }
 
+
+
 }

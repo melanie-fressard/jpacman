@@ -36,7 +36,7 @@ public class GameFactory {
      * @return A new single player game.
      */
     public Game createSinglePlayerGame(Level level, PointCalculator pointCalculator) {
-        return new SinglePlayerGame(playerFactory.createPacMan(), level, pointCalculator);
+        return new SinglePlayerGame(playerFactory.createPacMan(3), level, pointCalculator);
     }
 
     /**

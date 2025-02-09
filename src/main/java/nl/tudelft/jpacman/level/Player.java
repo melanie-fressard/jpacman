@@ -46,7 +46,7 @@ public class Player extends Unit {
     private Unit killer;
 
     /**
-     * Creates a new player with a score of 0 points.
+     * Creates a new player with a score of 0 points and 3 lives.
      *
      * @param spriteMap
      *            A map containing a sprite for this player for every direction.
@@ -57,6 +57,25 @@ public class Player extends Unit {
         this.score = 0;
         this.alive = true;
         this.lives = 3;
+        this.sprites = spriteMap;
+        this.deathSprite = deathAnimation;
+        deathSprite.setAnimating(false);
+    }
+
+    /**
+     * Creates a new player with a score of 0 points.
+     *
+     * @param spriteMap
+     *            A map containing a sprite for this player for every direction.
+     * @param deathAnimation
+     *            The sprite to be shown when this player dies.
+     * @param lives
+     *            The number of the player's lives at the beginning of the game
+     */
+    protected Player(Map<Direction, Sprite> spriteMap, AnimatedSprite deathAnimation, int lives) {
+        this.score = 0;
+        this.alive = true;
+        this.lives = lives;
         this.sprites = spriteMap;
         this.deathSprite = deathAnimation;
         deathSprite.setAnimating(false);

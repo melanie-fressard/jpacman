@@ -33,6 +33,10 @@ public class PlayerFactory {
         return new Player(getSprites().getPacmanSprites(), getSprites().getPacManDeathAnimation());
     }
 
+    public Player createPacMan(int lives) {
+        return new Player(getSprites().getPacmanSprites(), getSprites().getPacManDeathAnimation(), lives);
+    }
+
     /**
      * The sprites created by the factory.
      *

@@ -1,28 +1,22 @@
 # JPacman (Software Reengineering Build)
 
-## About
+## Ajout de l'attribut des vies
+![image](https://github.com/user-attachments/assets/85dfd194-b316-4fac-975e-31c265ae359f)
 
-Pacman-like game used for teaching. The original JPacman [repository](https://github.com/SERG-Delft/jpacman) was developed at Delft University of Technology.
+## Changement des constructeurs
+![image](https://github.com/user-attachments/assets/c39fe8f8-4a01-4d6d-9278-a67072108485)
+![image](https://github.com/user-attachments/assets/f08f16d8-f000-4566-84f5-6ac569f9ccca)
 
-This fork is used by the [Software Reengineering course](https://ansymore.uantwerpen.be/courses/software-reengineering) at the [University of Antwerp](https://www.uantwerpen.be/en/). **Warning:** if you are not a student for the Software Reengineering course, I strongly recommend you fork the original JPacman repository intead of this one.
+## Ajout de la fonction permettant de décrémenter la vie
+![image](https://github.com/user-attachments/assets/978cf5fb-7afd-4d26-8b46-97285f33946e)
 
-This fork contains bad smells and questionable practices (effectively making the code quality worst) introduced on purpose so that students can use reengineering tools to find and refactor these bad practices. Moreover, the testing parts of this fork will change from the original repository. Although, many parts of the code are still left untested intentionally.
+## Changement du comportement du jeu selon le nombre de collisions
+![image](https://github.com/user-attachments/assets/b098a23a-acc2-4c3f-b6f7-59ffb6fbaef1)
+![image](https://github.com/user-attachments/assets/a8bd89f5-10cf-4717-adb3-554ed61768f5)
 
-## Getting Started
+## Ajout d'un texte permettant de prévenir le joueur de son nombre de vie restant
+![image](https://github.com/user-attachments/assets/22aa3630-23e7-4d84-b306-ae205c1c0178)
 
-### IntelliJ
-1. Git clone the project
-2. Open IntelliJ and create new project "from existing sources"
-3. Select 'Gradle' in the following screen as external model, and click 'Next'
-4. In the next screen, optionally adjust the Gradle options and click 'Finish'
-5. To see JPacman in action: run `nl.tudelft.jpacman.Launcher`
-6. To run the test suite in IntelliJ: right click on a test or directory -> `Run` or `Run ...Test`
-    1. To see the coverage, on the Gradle tasks plugin right click on 'test' and select -> `Run 'jpacman[test]' with Coverage` 
+## Ajout des tests
+![image](https://github.com/user-attachments/assets/ad320147-0bbf-43a4-a184-6dd24f3e66b3)
 
-### Command line
-1. Git clone the project
-2. To build JPacman without running: `./gradlew build`
-3. To see JPacman in action: `./gradlew run`
-4. To run the tests use: `./gradlew test`
-5. For static analysis tools (not used in Software Reengineering): `./gradlew staticAnalysis`
-6. For static analysis tools and tests (not used in Software Reengineering): `./gradlew check`
